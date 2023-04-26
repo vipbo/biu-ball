@@ -28,10 +28,8 @@
 
 	//在prototype上写方法
 	Balloon.prototype.move = function(){
-		
 		//获取当前的top
 		var currentTop = this.ele.offsetTop;
-
 		// 如果currentTop< -123，则要重新从地下长出来
 		if(currentTop < -123){ //123是气球的高度
 			this.reBirth();
@@ -47,7 +45,6 @@
 	}
 
 	Balloon.prototype.reBirth = function(){
-
 		this.ele.style.top = getRandom(500,600) +"px"; //设置top值
 		this.ele.style.left = (document.documentElement.offsetWidth - 96) * Math.random() + "px";
 		
@@ -60,14 +57,12 @@
 		this.ele.style.backgroundPositionY  = (Math.ceil( this.mark/4) - 1)  * -123 +"px";
 		
 	}
-
 	Balloon.prototype.godie = function(){
 
 		this.ele.className = "balloon blow";
 
 		score.update(this.mark);//得分
 	}
-
 
 	window.Balloon = Balloon;
 
