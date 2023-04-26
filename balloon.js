@@ -30,12 +30,10 @@
 	Balloon.prototype.move = function(){
 		
 		//获取当前的top
-		// console.info( this.ele.offsetTop);
 		var currentTop = this.ele.offsetTop;
 
 		// 如果currentTop< -123，则要重新从地下长出来
 		if(currentTop < -123){ //123是气球的高度
-			console.info("重新从地下长出来");
 			this.reBirth();
 		}
 		else{
@@ -68,8 +66,6 @@
 		this.ele.className = "balloon blow";
 
 		score.update(this.mark);//得分
-
-		console.info("被打中了"+this.mark);
 	}
 
 
